@@ -6,7 +6,7 @@ const MyClass = () => {
   const [popularClass, setPopularClass] = useState([]);
 
   useEffect(() => {
-    fetch('https://assignment-12-server-muntasirrifat23.vercel.app/add')
+    fetch('https://school-camp-service.vercel.app/add')
       .then(res => res.json())
       .then(data => {
         setPopularClass(data)
@@ -16,7 +16,7 @@ const MyClass = () => {
   }, []);
 
   const handleDelete = (item) => {
-    fetch(`https://assignment-12-server-muntasirrifat23.vercel.app/add/${item._id}`, {
+    fetch(`https://school-camp-service.vercel.app/add/${item._id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())

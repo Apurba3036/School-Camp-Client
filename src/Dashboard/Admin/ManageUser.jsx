@@ -6,13 +6,13 @@ import UseEnroll from '../../Component/Main/UseEnroll';
 
 const ManageUser = () => {
     const { data: user=[], refetch } = useQuery(['user'], async () => {
-        const res = await fetch('https://assignment-12-server-muntasirrifat23.vercel.app/user');
+        const res = await fetch('https://school-camp-service.vercel.app/user');
         return res.json();
     });
 
     // Admin
     const handleAdmin = (item) => {
-        fetch(`https://assignment-12-server-muntasirrifat23.vercel.app/user/admin/${item._id}`, {
+        fetch(`https://school-camp-service.vercel.app/user/admin/${item._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -30,7 +30,7 @@ const ManageUser = () => {
             });
     };
     const handleInstructor = (item) => {
-        fetch(`https://assignment-12-server-muntasirrifat23.vercel.app/user/instructor/${item._id}`, {
+        fetch(`https://school-camp-service.vercel.app/user/instructor/${item._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -61,8 +61,8 @@ const ManageUser = () => {
     //         .then((result) => {
     //             if (result.isConfirmed) {
     //                 const url = item.role === 'admin'
-    //                     ? `https://assignment-12-server-muntasirrifat23.vercel.app/admin/${item._id}`
-    //                     : `https://assignment-12-server-muntasirrifat23.vercel.app/instructor/${item._id}`;
+    //                     ? `https://school-camp-service.vercel.app/admin/${item._id}`
+    //                     : `https://school-camp-service.vercel.app/instructor/${item._id}`;
 
     //                 fetch(url, {
     //                     method: 'DELETE',

@@ -8,7 +8,7 @@ const UseEnroll = () => {
     const {refetch, data:enrolled=[]} = useQuery({
         queryKey: ['enroll',user?.email],
         queryFn: async() =>{
-            const response = await axios.get(`https://assignment-12-server-muntasirrifat23.vercel.app/enroll?email=${user?.email}`);
+            const response = await axios.get(`https://school-camp-service.vercel.app/enroll?email=${user?.email}`);
             return response.data;
         },
     })

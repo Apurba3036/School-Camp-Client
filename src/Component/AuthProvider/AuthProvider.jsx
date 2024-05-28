@@ -43,7 +43,7 @@ useEffect(()=>{
         setUser(loggedUser);
         // setLoading(false);
         if(loggedUser){
-            axios.post('https://assignment-12-server-muntasirrifat23.vercel.app/jwt',{email:loggedUser.email})
+            axios.post('https://school-camp-service.vercel.app/jwt',{email:loggedUser.email})
             .then(data =>{
                 localStorage.setItem('token', data.data.token)
                 setLoading(false);

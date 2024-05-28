@@ -20,7 +20,7 @@ const EnrolledClass = () => {
           })
           .then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://assignment-12-server-muntasirrifat23.vercel.app/enroll/${items._id}`,{
+                fetch(`https://school-camp-service.vercel.app/enroll/${items._id}`,{
                     method:'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

@@ -20,7 +20,7 @@ const AddClass = () => {
     const saveLoggedUser = {email: add.email,classV, name:add.displayName, image, sit, price}
     formRef.current.reset();
 
-    fetch('https://assignment-12-server-muntasirrifat23.vercel.app/add', {
+    fetch('https://school-camp-service.vercel.app/add', {
       method: 'POST',
       headers: {
           'content-type': 'application/json'
